@@ -51,7 +51,10 @@
     },
 
     hasAnyQueensConflicts: function() {
+      if(this.rows().length){
       return this.hasAnyRooksConflicts() || this.hasAnyMajorDiagonalConflicts() || this.hasAnyMinorDiagonalConflicts();
+      }
+      return false;
     },
 
     _isInBounds: function(rowIndex, colIndex) {
